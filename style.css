@@ -79,7 +79,7 @@ HEADER
 =========================================*/
 .hero-img{
     min-height: 400px;
-    background-image: url('/images/ben-sophie1.jpg');
+    background-image: url('/images/ben-sophie1.JPG');
 }
 
 .header-content{
@@ -279,7 +279,7 @@ input[type=submit]{
 
 .form-img{
     grid-area: img;
-    background-image: url('/images/ben-sophie2.jpg');
+    background-image: url('/images/ben-sophie2.JPG');
 }
 
 @media screen and (min-width: 650px) {
