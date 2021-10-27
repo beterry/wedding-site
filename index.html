@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ben & Sophie</title>
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+</head>
+
+<body>
+    <div class="mww">
+        <header>
+            <div class="hero-margin t1"></div>
+            <div class="hero-margin t2"></div>
+            <div class="hero-margin t3"></div>
+            <div class="hero-margin t4"></div>
+
+            <div class="hero-img">
+                <img id="hero-sign" src="images/sign.gif" alt="">
+            </div>
+            <div class="header-content">
+                <h1>Celebrate <br> with us!</h1>
+                <img class="badge" src="images/badge.svg" alt="Colorado badge">
+                <p>We plan to elope in Brekenridge, Colorado on July 7th, 2022.</p>
+                <p> Although we won’t be able to celebrate with you during that time, we hope you can make it to our post-elopement party to celebrate with us a month later.</p>
+                <span class="material-icons">expand_more</span>
+            </div>
+
+            <div class="hero-margin b1"></div>
+            <div class="hero-margin b2"></div>
+            <div class="hero-margin b3"></div>
+            <div class="hero-margin b4"></div>
+        </header>
+        <section class="info-grid">
+            <div>
+                <h2>Date</h2>
+                <p class="info-large">August 6th</p>
+                <p>2022</p>
+            </div>
+            <div>
+                <h2>Location</h2>
+                <p class="info-large">West Chester, PA</p>
+                <p>2 W Market St</p>
+            </div>
+            <div>
+                <h2>Time</h2>
+                <p class="info-large">6 PM - 10 PM</p>
+                <p>Arrive between 6:00 - 6:15</p>
+            </div>
+        </section>
+        <section class="form-grid">
+            <div class="form-margin t1"></div>
+            <div class="form-margin t2"></div>
+            <div class="form-margin t3"></div>
+            <div class="form-margin t4"></div>
+            <div class="form-margin t5"></div>
+            <div class="form-margin t6"></div>
+            <div class="form-margin t7"></div>
+
+            <div class="form-margin m1"></div>
+            <div class="form-margin m2"></div>
+
+            <form action="https://usebasin.com/f/75e8cd7f2b25.json" method="POST" id="rsvp">
+                <h2 class="section-heading">RSVP</h2>
+                <p>Fill out the form to let us know if you and/or your partner will be attending.</p>
+                <div id="nameGroup">
+                    <div class="form-group">
+                        <input type="text" id="name-1" name="Name 1" placeholder="Type name here" required/>
+                        <div class="radio-group">
+                            <div class="attending-group">
+                                <input type="radio" id="attending-1" name="Name 1 Status" value="Will attend" checked>
+                                <label for="attending-1">Attending</label>
+                            </div>
+                            <div class="attending-group">
+                                <input type="radio" id="not-attending-1" name="Name 1 Status" value="Will not attend">
+                                <label for="not-attending-1">Not Attending</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="name-2" name="Name 2" placeholder="Type name here" required/>
+                        <div class="radio-group">
+                            <div class="attending-group">
+                                <input type="radio" id="attending-2" name="Name 2 Status" value="Will attend" checked>
+                                <label for="attending-2">Attending</label>
+                            </div>
+                            <div class="attending-group">
+                                <input type="radio" id="not-attending-2" name="Name 2 Status" value="Will not attend">
+                                <label for="not-attending-2">Not Attending</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button id="addName">
+                        <span class="material-icons">
+                        add_circle
+                        </span>
+                        Add Another Name
+                    </button>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="diet" name="Dietary Restrictions" placeholder="Any dietary restrictions or food allergies?" />
+                </div>
+                <div id="form-message" class="form-group">
+                    <input type="submit" >
+                </div>
+            </form>
+
+            <div class="form-margin b1"></div>
+            <div class="form-margin b2"></div>
+            <div class="form-margin b3"></div>
+            <div class="form-margin b4"></div>
+            <div class="form-img"></div>
+        </section>
+        <section class="faq">
+            <h2 class="section-heading">Things to know</h2>
+            <div class="faq-grid">
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Places to Stay</h3>
+                        <img src="images/icons/places-to-stay.svg" alt="">
+                    </div>
+                    <p>We suggest Hotel Warner. It’s a 3 minute walk from the venue.</p>
+                    <p>120 N High St<br>West Chester, PA 19380</p>
+                    <p>Check availability here</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Dinner</h3>
+                        <img src="images/icons/dinner.svg" alt="">
+                    </div>
+                    <p>The party will be catered by Limoncello, a popular West Chester restaurant. There will be hor ‘dourves
+                        passed at the cocktail hour.</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Parking</h3>
+                        <img src="images/icons/parking.svg" alt="">
+                    </div>
+                    <p>There is a parking garage next to the venue. It’s $5.00 per hour.</p>
+                    <p>120 N High St<br>West Chester, PA 19380</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Gifts</h3>
+                        <img src="images/icons/gifts.svg" alt="">
+                    </div>
+                    <p>We are not registered anywhere as we have a pretty established apartment full of stuff. No gift is
+                        necessary; however, as we start to house-hunt, we would greatly appreciate any amount of cash as a gift
+                        towards our future home.</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Drinks</h3>
+                        <img src="images/icons/drinks.svg" alt="">
+                    </div>
+                    <p>There will be an open bar at all times in the room.</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Dress Code</h3>
+                        <img src="images/icons/dress-code.svg" alt="">
+                    </div>
+                    <p>Cocktail attire:<br>Suits/ties and cocktail dresses.</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Adults Only</h3>
+                        <img src="images/icons/adults-only.svg" alt="">
+                    </div>
+                    <p>Our party is going to be an adults-only event so that everyone can enjoy the evening. We appreciate you making arrangements ahead of time and leaving the kids at home so you can celebrate with us!</p>
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>After Party</h3>
+                        <img src="images/icons/after-party.svg" alt="">
+                    </div>
+                    <p>We plan on continuing the night after 10 o’clock by going to local bars and clubs within walking distance to the venue. All are welcome to keep the party going with us!</p>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <h2 class="section-heading">See You There!</h2>
+        </footer>
+    </div>
+
+    <script src="wedding-site.js"></script>
+</body>
+
+</html>

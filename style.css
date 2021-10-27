@@ -1,0 +1,386 @@
+:root{
+    --light-blue: #DBE8F3;
+    --pink: #AD3691;
+    --dark-blue: #16273A;
+
+    --light-gray: hsla(0, 0%, 0%, 0.2);
+
+    --section-padding: max(7%, 32px);
+
+    --padding: 2.5%;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Lato', sans-serif;
+}
+
+h1, h2, h3, h4, h5{
+    font-family: 'Bebas Neue', cursive;
+    margin: 0;
+    line-height: 1;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    color: var(--pink);
+}
+
+p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+ul{
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 24px;
+}
+
+li{
+    display: list-item;
+}
+
+section, footer{
+    margin: var(--section-padding) auto;
+}
+
+.mww{
+    position: relative;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.mww-slim{
+    max-width: 920px;
+}
+
+.section-heading{
+    font-size: 4.5rem;
+    text-align: center;
+}
+
+@media screen and (min-width: 650px){
+    .section-heading{
+        font-size: 6rem;
+    }
+}
+
+.hero-img, .form-img{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/*=======================================
+HEADER
+=========================================*/
+.hero-img{
+    min-height: 400px;
+    background-image: url('images/ben-sophie1.jpg');
+}
+
+.header-content{
+    grid-area: content;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 64px 0;
+    padding-top: 36px;
+    background-color: var(--light-blue);
+}
+
+.header-content h1{
+    font-size: 5rem;
+}
+
+.header-content p{
+    max-width: 400px;
+    font-size: 1rem;
+    color: var(--dark-blue);
+    margin: 16px 0;
+    line-height: 1.5;
+}
+
+.header-content .material-icons{
+    font-size: 32px;
+    color: var(--dark-blue);
+    animation: arrowdown 1s ease-in infinite alternate;
+}
+
+@keyframes arrowdown {
+    from{
+        transform: translateY(0);
+    }
+
+    to{
+        transform: translateY(8px);
+    }
+}
+
+@media screen and (min-width: 650px) {
+    header{
+        display: grid;
+        grid-template-areas: 
+            "t1 t2 t3 t4"
+            "img img content content"
+            "b1 b2 b3 b4"
+        ;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 32px auto 32px;
+    
+        padding-right: 32px;
+    }
+
+    .hero-img{
+        grid-area: img;
+        background-image: url('images/ben-sophie1.jpg');
+        position: relative;
+    }
+
+    #hero-sign{
+        width: 400px;
+        position: absolute;
+        bottom: 32px;
+        left: 32px;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .header-content h1{
+        font-size: 7rem;
+    }
+
+    .header-content p{
+        font-size: 1.25rem;
+    }
+}
+
+.header-content .badge{
+    width: 130px;
+    margin: 16px 0;
+}
+
+
+/*=======================================
+INFO SECTION
+=========================================*/
+.info-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center;
+    max-width: 400px;
+    padding: 0 32px;
+}
+
+.info-grid div{
+    text-align: center;
+    padding: 32px 0;
+}
+
+.info-grid h2{
+    font-family: 'Lato', sans-serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: .7px;
+    font-weight: 300;
+}
+
+.info-grid div:not(:first-of-type){
+    border-top: 1px solid black;
+}
+
+.info-large{
+    font-size: 1.75rem;
+    margin: 8px 0;
+}
+
+@media screen and (min-width: 920px) {
+    .info-grid{
+        max-width: 100%;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .info-grid div{
+        padding: 0;
+    }
+
+    .info-grid div:not(:first-of-type){
+        border: none;
+        border-left: 1px solid black;
+    }
+}
+
+/*=======================================
+FORM
+=========================================*/
+
+.form-grid{
+    
+}
+
+form{
+    grid-area: form;
+    text-align: center;
+    background-color: var(--light-blue);
+    padding: 64px 32px;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 16px;
+    border-radius: 8px;
+    border: none;
+}
+
+.form-group{
+    margin: 32px auto;
+}
+
+.radio-group{
+    margin-top: 8px;
+    display: flex;
+}
+
+.attending-group:first-of-type{
+    margin-right: 16px;
+}
+
+#addName{
+    background-color: transparent;
+    border: none;
+    display: flex;
+    padding: 4px 8px;
+    align-items: center;
+    cursor: pointer;
+    color: var(--dark-blue);
+}
+
+#addName:hover{
+    color: var(--pink);
+}
+
+#addName span{
+    margin-right: 8px;
+}
+
+input[type=submit]{
+    background-color: var(--dark-blue);
+    border: none;
+    border-radius: 4px;
+    padding: 16px 32px;
+    color: white;
+    width: 100%;
+    max-width: 300px;
+}
+
+.form-img{
+    grid-area: img;
+    background-image: url('images/ben-sophie2.jpg');
+}
+
+@media screen and (min-width: 650px) {
+    .form-grid{
+        display: grid;
+        grid-template-areas:
+            "t1 t2 t3 t4 t5 t6 t7"
+            "m1 form form m2 img img img"
+            "b1 b2 b3 b4 img img img"
+        ;
+        grid-template-columns: 10% 1fr 1fr 10% 1fr 1fr 10%;
+        grid-template-rows: 32px auto 32px;
+    }
+
+    form{
+        padding: 64px 0;
+    }
+}
+
+/*=======================================
+FAQ SECTION
+=========================================*/
+.faq{
+    max-width: 920px;
+    padding: 0 32px;
+}
+
+.faq-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+    margin-top: 32px;
+}
+
+.faq-section{
+    border: 1px solid hsla(0, 0%, 0%, 0.2);
+    border-radius: 4px;
+    padding: 16px 32px;
+}
+
+.faq-card-heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-section img{
+    width: 50px;
+    display: block;
+}
+
+.faq-section h3{
+    font-family: 'Lato', sans-serif;
+    color: var(--dark-blue);
+    font-size: 1.5rem;
+}
+
+.faq-section p{
+    line-height: 1.5;
+    margin: 16px 0;
+}
+
+@media screen and (min-width: 650px) {
+    .faq-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/*=======================================
+FOOTER
+=========================================*/
+footer{
+    text-align: center;
+    padding: 0 32px;
+}
+
+/*=======================================
+HEADER COLORS
+=========================================*/
+.hero-margin.t1{background-color: transparent;}
+.hero-margin.t2{background-color: var(--light-blue);}
+.hero-margin.t3{background-color: var(--light-blue);}
+.hero-margin.t4{background-color: var(--light-blue);}
+.hero-margin.b1{background-color: transparent;}
+.hero-margin.b2{background-color: var(--light-blue);}
+.hero-margin.b3{background-color: var(--light-blue);}
+.hero-margin.b4{background-color: var(--light-blue);}
+
+.form-margin.t1{background-color: var(--light-blue);}
+.form-margin.t2{background-color: var(--light-blue);}
+.form-margin.t3{background-color: var(--light-blue);}
+.form-margin.t4{background-color: var(--light-blue);}
+.form-margin.t5{background-color: var(--light-blue);}
+.form-margin.t6{background-color: transparent;}
+.form-margin.t7{background-color: transparent;}
+
+.form-margin.m1{background-color: var(--light-blue);}
+.form-margin.m2{background-color: var(--light-blue);}
+
+.form-margin.b1{background-color: transparent;}
+.form-margin.b2{background-color: transparent;}
+.form-margin.b3{background-color: transparent;}
+.form-margin.b4{background-color: transparent;}
