@@ -11,7 +11,7 @@ addNameButton.addEventListener('click', (e) => {
     if (numberOfNames <= 6){
         nameGroup.insertAdjacentHTML('beforeend', `
             <div class="form-group">
-                <input type="text" id="name-${numberOfNames}" name="Name ${numberOfNames}" placeholder="Type name here" required/>
+                <input type="text" id="name-${numberOfNames}" name="Name ${numberOfNames}" placeholder="Add another name" required/>
                 <div class="radio-group">
                     <div class="attending-group">
                         <input type="radio" id="attending-${numberOfNames}" name="Name ${numberOfNames} Status" value="Will attend" checked>
@@ -30,7 +30,7 @@ addNameButton.addEventListener('click', (e) => {
 
 })
 
-var form = document.getElementById("rsvp");
+var form = document.getElementById("rsvp-form");
 var formMessage = document.getElementById("form-message");
 form.onsubmit = function (event) {
     event.preventDefault();

@@ -13,7 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap"
         rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
@@ -31,6 +31,11 @@
                 <img id="hero-sign" src="images/sign.gif" alt="">
             </div>
             <div class="header-content">
+                <nav>
+                    <a href="#details">Details</a>
+                    <a href="#rsvp">RSVP</a>
+                    <a href="#faq">Things to Know</a>
+                </nav>
                 <h1>Celebrate <br> with us!</h1>
                 <img class="badge" src="images/badge.svg" alt="Colorado badge">
                 <p>We plan to elope in Brekenridge, Colorado on July 7th, 2022.</p>
@@ -43,7 +48,7 @@
             <div class="hero-margin b3"></div>
             <div class="hero-margin b4"></div>
         </header>
-        <section class="info-grid">
+        <section id="details" class="info-grid">
             <div>
                 <h2>Date</h2>
                 <p class="info-large">August 6th</p>
@@ -60,7 +65,7 @@
                 <p>Arrive between 6:00 - 6:15</p>
             </div>
         </section>
-        <section class="form-grid">
+        <section id="rsvp" class="form-grid">
             <div class="form-margin t1"></div>
             <div class="form-margin t2"></div>
             <div class="form-margin t3"></div>
@@ -72,12 +77,12 @@
             <div class="form-margin m1"></div>
             <div class="form-margin m2"></div>
 
-            <form action="https://usebasin.com/f/75e8cd7f2b25.json" method="POST" id="rsvp">
+            <form action="https://usebasin.com/f/75e8cd7f2b25.json" method="POST" id="rsvp-form">
                 <h2 class="section-heading">RSVP</h2>
-                <p>Fill out the form to let us know if you and/or your partner will be attending.</p>
+                <p>Fill out the form to let us know if you will be attanding.</p>
                 <div id="nameGroup">
                     <div class="form-group">
-                        <input type="text" id="name-1" name="Name 1" placeholder="Type name here" required/>
+                        <input type="text" id="name-1" name="Name 1" placeholder="Your name (required)" required/>
                         <div class="radio-group">
                             <div class="attending-group">
                                 <input type="radio" id="attending-1" name="Name 1 Status" value="Will attend" checked>
@@ -90,7 +95,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" id="name-2" name="Name 2" placeholder="Type name here" required/>
+                        <input type="text" id="name-2" name="Name 2" placeholder="Your partner's name (if applicable)"/>
                         <div class="radio-group">
                             <div class="attending-group">
                                 <input type="radio" id="attending-2" name="Name 2 Status" value="Will attend" checked>
@@ -125,7 +130,7 @@
             <div class="form-margin b4"></div>
             <div class="form-img"></div>
         </section>
-        <section class="faq">
+        <section id="faq" class="faq">
             <h2 class="section-heading">Things to know</h2>
             <div class="faq-grid">
                 <div class="faq-section">
@@ -133,9 +138,26 @@
                         <h3>Places to Stay</h3>
                         <img src="images/icons/places-to-stay.svg" alt="">
                     </div>
-                    <p>We suggest Hotel Warner. It’s a 3 minute walk from the venue.</p>
-                    <p>120 N High St<br>West Chester, PA 19380</p>
-                    <p>Check availability here</p>
+                    <p>We suggest Hotel Warner. It is a 3 minute walk from the venue. However, there are several other hotel options close by. Click the hotel names below to check availability.</p>
+
+                    <div class="address">
+                        <a href="https://be.synxis.com/?adult=2&arrive=2022-08-06&chain=56&child=0&currency=USD&depart=2022-08-07&hotel=61838&level=hotel&locale=en-US&rooms=1&shell=rPHLHW&template=rPHLHWD">Hotel Warner</a>
+                        <p>120 N High St.</p>
+                        <p>West Chester, PA 19380</p>
+                    </div>
+
+                </div>
+                <div class="faq-section">
+                    <div class="faq-card-heading">
+                        <h3>Parking</h3>
+                        <img src="images/icons/parking.svg" alt="">
+                    </div>
+                    <p>There is a parking garage next to the venue. It is  $6.00 for 4 hours.</p>
+                    <div class="address">
+                        <p>Bicentennial Parking Facility</p>
+                        <p>20 S High St.</p>
+                        <p>West Chester, PA 19382</p>
+                    </div>
                 </div>
                 <div class="faq-section">
                     <div class="faq-card-heading">
@@ -144,14 +166,7 @@
                     </div>
                     <p>The party will be catered by Limoncello, a popular West Chester restaurant. There will be hor ‘dourves
                         passed at the cocktail hour.</p>
-                </div>
-                <div class="faq-section">
-                    <div class="faq-card-heading">
-                        <h3>Parking</h3>
-                        <img src="images/icons/parking.svg" alt="">
-                    </div>
-                    <p>There is a parking garage next to the venue. It’s $5.00 per hour.</p>
-                    <p>120 N High St<br>West Chester, PA 19380</p>
+                    <p class="italics">Vegitarian options will also be avalible.</p>
                 </div>
                 <div class="faq-section">
                     <div class="faq-card-heading">
