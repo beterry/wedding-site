@@ -252,9 +252,6 @@ INFO SECTION
 FORM
 =========================================*/
 
-.form-grid{
-    
-}
 
 form{
     grid-area: form;
@@ -313,6 +310,11 @@ input[type=submit]{
     color: white;
     width: 100%;
     max-width: 300px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover{
+    background-color: var(--pink);
 }
 
 .form-img{
@@ -320,7 +322,7 @@ input[type=submit]{
     background-image: url('/images/ben-sophie2.JPG');
 }
 
-@media screen and (min-width: 650px) {
+@media screen and (min-width: 800px) {
     .form-grid{
         display: grid;
         grid-template-areas:
@@ -330,6 +332,9 @@ input[type=submit]{
         ;
         grid-template-columns: 10% 1fr 1fr 10% 1fr 1fr 10%;
         grid-template-rows: 32px auto 32px;
+
+        padding-left: 32px;
+        padding-right: 32px;
     }
 
     form{
@@ -345,8 +350,6 @@ FAQ SECTION
     padding-right: 32px;
     padding-left: 32px;
 }
-
-
 
 .faq-grid{
     display: grid;
@@ -383,6 +386,12 @@ FAQ SECTION
     margin: 16px 0;
 }
 
+.address-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+}
+
 .address{
     margin: 16px 0;
 }
@@ -394,6 +403,13 @@ FAQ SECTION
 @media screen and (min-width: 650px) {
     .faq-grid{
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (min-width: 1015px) {
+    .address-grid{
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
 }
 
